@@ -4,13 +4,13 @@ class Stringify
   def initialize(name, adjective)
     @name = name
     @adjective = adjective
-
   end
 
   def what_am_i
     if @name.blank? || @adjective.blank?
-        return "You are nothing!"
+        "You are nothing!"
+    end
     else
-        return "your_name is so cool"
+        @name.to_s + " is so " + @adjective.to_s
   end
 end

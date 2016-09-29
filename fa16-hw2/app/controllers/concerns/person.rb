@@ -4,26 +4,29 @@ class Person
   def initialize(name, age)
     @name = name
     @age = age
-    @nickname =  @name[0, 4]
+    @nickname =  name[0, 4]
   end
 
   def nickname
-    return @nickname
+    @nickname
   end
 
   def birth_year
-    year = 2016 - @age
-    return year
+    2016 - @age.to_i
+
   end
 
   def introduction
-    introduction = @name + ', ' + @age + ' years old'
-    return introduction
+    @name + ', ' + @age + ' years old'
+
   end
 
   def fib_number
-    if @age <= 2
-        return 1
-    return fib_number(@age-1) + fib_number(@age-2)
+      a, b, i = 0, 1, 1
+      while i < @age.to_i
+          a, b = b, a+b
+          i+=1
+      end
+      b
   end
 end
