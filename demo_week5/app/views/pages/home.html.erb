@@ -1,0 +1,9 @@
+<h1> Hello World! </h1>
+
+<%= form_for @user do |f| %>
+    <h2> Name </h2>
+    <%= f.text_field :name %>
+    <h2> Is_admin </h2>
+    <%= f.check_box :is_admin %>
+    <%= f.submit 'submit' %>
+<% end %>
