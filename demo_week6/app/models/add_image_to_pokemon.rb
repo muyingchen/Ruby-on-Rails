@@ -1,0 +1,2 @@
+class AddImageToPokemon < ApplicationRecord
+end
